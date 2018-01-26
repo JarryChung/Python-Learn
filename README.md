@@ -7,7 +7,7 @@ Record learning python.
 
 ### 篇章标题
 + 注意小点
-> 代码块
+> 单行代码
 
 ### page2
 
