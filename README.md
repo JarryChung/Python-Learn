@@ -6,7 +6,7 @@ Record learning python.
 + python_2: list,tuple,dict,set
 + python_3: 条件判断与循环
 + python_4: 函数(重点难点)
-+ python_5: 
++ python_5: 高级特性
 + python_6: 
 + python_7: 
 + python_8: 
@@ -86,7 +86,15 @@ Record learning python.
 + 递归函数：如果一个函数在内部调用自身本身，这个函数就是递归函数。
     + 尾递归是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。
 #### python_5
-+ 
++ 切片
+    + 可用于list & tuple & string
+    + L[0:3]表示，从索引0开始取，直到索引3为止，但不包括索引3。即索引0，1，2，正好是3个元素。
+    + 如果第一个索引是0，可以省略。
+    + 第3个参数为切片的间隔。
++ 迭代
+    + 在Python中，迭代是通过for ... in来完成的。
+    + Python的for循环不仅可以用在list或tuple上，还可以作用在其他可迭代对象上。
+    + 
 
 
 
