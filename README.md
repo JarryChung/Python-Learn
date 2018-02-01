@@ -94,6 +94,13 @@ Record learning python.
 + 迭代
     + 在Python中，迭代是通过for ... in来完成的。
     + Python的for循环不仅可以用在list或tuple上，还可以作用在其他可迭代对象上。
+    + 当我们使用for循环时，只要作用于一个可迭代对象，for循环就可以正常运行，而我们不太关心该对象究竟是list还是其他数据类型。
+    + Python内置的enumerate函数可以把一个list变成索引-元素对，这样就可以在for循环中同时迭代索引和元素本身。
++ 列表生成式
+    + 列表生成式即List Comprehensions，是Python内置的非常简单却强大的可以用来创建list的生成式。
+    + for循环其实可以同时使用两个甚至多个变量，比如dict的items()可以同时迭代key和value。
++ 生成器
+    + 将列表生成式的[]换成（）则可。
     + 
 
 
