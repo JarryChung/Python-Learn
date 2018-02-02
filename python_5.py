@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from collections import Iterable
+from collections import Iterator
 
 # 切片,list & tuple & 字符串
 L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
@@ -62,4 +63,33 @@ print("---------------------------------")
 
 # 生成器
 g = (x * x for x in range(1, 8))
-print(next(g))
+print(next(g))      # next不常用
+for x in g:         # 经常使用for循环来迭代生成器
+    print(x)
+
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+
+
+g = fib(6)
+while True:
+    try:
+        x = next(g)
+        print('g:', x)
+    except StopIteration as e:
+        print('Generator return value:', e.value)
+        break
+
+print("---------------------------------")
+
+# 迭代器
+print(isinstance((x for x in range(10)), Iterator))     # 判断是否为迭代器
+print(isinstance(iter('abc'), Iterator))        # 判断是否为迭代器
+print(isinstance('abc', Iterable))      # 判断是否为可迭代对象
+
