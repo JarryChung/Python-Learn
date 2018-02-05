@@ -7,7 +7,7 @@ Record learning python.
 + python_3: 条件判断与循环
 + python_4: 函数(重点难点)
 + python_5: 高级特性
-+ python_6: 
++ python_6: 函数式编程
 + python_7: 
 + python_8: 
 + python_9: 
@@ -112,7 +112,7 @@ Record learning python.
     + 凡是可作用于for循环的对象都是Iterable类型，凡是可作用于next()函数的对象都是Iterator类型，它们表示一个惰性计算的序列。
     + Python的for循环本质上就是通过不断调用next()函数实现的。
 #### python_6
-+ 
++ 高阶函数
 
 
 
