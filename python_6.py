@@ -50,4 +50,6 @@ def is_odd(n):
 
 print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
 
+# sorted排序
+print(sorted([-9,-11,11,9,0]))
 
