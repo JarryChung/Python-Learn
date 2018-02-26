@@ -124,7 +124,8 @@ Record learning python.
 + 和map()类似，filter()也接收一个函数和一个序列。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。
 + filter()函数返回的是一个Iterator，也就是一个惰性序列，所以要强迫filter()完成计算结果，需要用list()函数获得所有结果并返回list。
 + Python内置的sorted()函数就可以对list进行排序。
-+ 
++ 高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。
+    + 
 
 
 

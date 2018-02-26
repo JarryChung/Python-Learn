@@ -51,5 +51,7 @@ def is_odd(n):
 print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
 
 # sorted排序
-print(sorted([-9,-11,11,9,0]))
+print(sorted([-9,-11,11,9,0]))      # 按数值大小
+print(sorted([-9,-11,11,9,0], key=abs))     # 按绝对值大小
+print(sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True))       # 转化为小写字母排序并且反序
 
