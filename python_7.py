@@ -21,4 +21,5 @@ def test():
 if __name__=='__main__':
     test()
 
-#　名为python_7的模块
+# 名为python_7的模块
+# 实际使用时需与__init__.py在同一文件夹
