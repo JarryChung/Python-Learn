@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from types import MethodType
+from enum import Enum
 
 
 class Students(object):         # 先定义类
@@ -42,3 +43,7 @@ print(dir(Students))                # 查看类Students含有的方法与属性
 
 s.score = 99
 print(s.score)
+
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))     # 枚举所有成员
+for name, member in Month.__members__.items():
+    print(name, '=>', member, ',', member.value)
