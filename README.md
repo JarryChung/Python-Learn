@@ -11,7 +11,15 @@ Record learning python.
 + python_7: 模块
 + python_8: 面向对象编程
 + python_9: 面向对象高级编程
-+ python_10: 
++ python_10: 错误、调试和测试
++ python_11
++ python_12
++ python_13
++ python_14
++ python_15
++ python_16
++ python_17
++ python_18
 
 [toc]
 
@@ -207,6 +215,23 @@ Record learning python.
         + class的名称；
         + 继承的父类集合，注意Python支持多重继承，如果只有一个父类，别忘了tuple的单元素写法；
         + class的方法名称与函数绑定，这里我们把函数fn绑定到方法名hello上。
+    + 先定义metaclass，就可以创建类，最后创建实例。metaclass允许你创建类或者修改类。换句话说，你可以把类看成是metaclass创建出来的“实例”。
+#### python_10
++ 错误处理
+    + python内置了一套try...except...finally...的错误处理机制。
+    + 当我们认为某些代码可能会出错时，就可以用try来运行这段代码，如果执行出错，则后续代码不会继续执行，而是直接跳转至错误处理代码，即except语句块，执行完except后，如果有finally语句块，则执行finally语句块，至此，执行完毕。
+    + 由于没有错误发生，所以except语句块不会被执行，但是finally如果有，则一定会被执行（可以没有finally语句）。
+    + 可以有多个except来捕获不同类型的错误。
+    + 如果没有错误发生，可以在except语句块后面加一个else，当没有错误发生时，会自动执行else语句。
+    + 所有的错误类型都继承自BaseException，所以在使用except时需要注意的是，它不但捕获该类型的错误，还把其子类也“一网打尽”。
+    + 如果不捕获错误，自然可以让Python解释器来打印出错误堆栈，但程序也被结束了。既然我们能捕获错误，就可以把错误堆栈打印出来，然后分析错误原因，同时，让程序继续执行下去。
+    + Python内置的logging模块可以非常容易地记录错误信息。
+    + 因为错误是class，捕获一个错误就是捕获到该class的一个实例。用raise语句抛出一个错误的实例。
++ 调试
+    + 凡是用print()来辅助查看的地方，都可以用断言（assert）来替代。
+    + 启动Python解释器时可以用-O参数来关闭assert，关闭后，可以把所有的assert语句当成pass来看。
+    + 把print()替换为logging是第3种方式，和assert比，logging不会抛出错误，而且可以输出到文件，logging.info()就可以输出一段文本。
++ 单元测试
     + 
     
 
