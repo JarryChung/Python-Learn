@@ -13,9 +13,9 @@ Record learning python.
 + python_9: 面向对象高级编程
 + python_10: 错误、调试和测试
 + python_11：I/O编程
-+ python_12
-+ python_13
-+ python_14
++ python_12：进程和线程
++ python_13：正则表达式
++ python_14：
 + python_15
 + python_16
 + python_17
@@ -261,7 +261,24 @@ Record learning python.
     + ```os.rename('test.txt', 'test.py')```对文件重命名。
     + ```os.remove('test.py')```删掉文件。
 + 序列化
-    + 
+    + 把变量从内存中变成可存储或传输的过程称之为序列化，在Python中叫pickling。
+    + 把变量内容从序列化的对象重新读到内存里称之为反序列化，即unpickling。
+    + Python内置的json模块提供了非常完善的Python对象到JSON格式的转换。
+    + 把JSON反序列化为Python对象，用loads()或者对应的load()方法，前者把JSON的字符串反序列化，后者从file-like Object中读取字符串并反序列化。
+    + JSON标准规定JSON编码是UTF-8，所以我们总是能正确地在Python的str与JSON的字符串之间转换。
+#### python_12
++ 多任务的实现有3种方式:多进程模式；多线程模式；多进程+多线程模式。
++ 多进程
+    + 进程间通信是通过Queue、Pipes等实现的。
+    + multiprocessing模块就是跨平台版本的多进程模块，multiprocessing模块提供了一个Process类来代表一个进程对象。
++ 多线程
+    + Python的标准库提供了两个模块：_thread和threading，_thread是低级模块，threading是高级模块，对_thread进行了封装。
+    + 启动一个线程就是把一个函数传入并创建Thread实例，然后调用start()开始执行。
+    + 多线程编程，模型复杂，容易发生冲突，必须用锁加以隔离，同时，又要小心死锁的发生。
+    + Python解释器由于设计时有GIL全局锁，导致了多线程无法利用多核。
++ 一个ThreadLocal变量虽然是全局变量，但每个线程都只能读写自己线程的独立副本，互不干扰。ThreadLocal解决了参数在一个线程中各个函数之间互相传递的问题。
++ 在Thread和Process中，应当优选Process，因为Process更稳定，而且，Process可以分布到多台机器上，而Thread最多只能分布到同一台机器的多个CPU上。
++ 
 
 
     
