@@ -2,6 +2,8 @@
 
 from io import StringIO, BytesIO
 import os
+import json
+
 
 f = open('python_1.py', 'r')            # 以读方式打开文件python_1.py
 print(f.read())
@@ -51,3 +53,9 @@ os.mkdir('/home/jarrychung/testdir')
 os.rmdir('/home/jarrychung/testdir')
 
 
+print("--------------------------------------------------------------")
+# Python内置的json模块提供了非常完善的Python对象到JSON格式的转换。
+d = dict(name='Bob', age=20, score=88)
+print(json.dumps(d))            # dumps()方法返回一个str，内容就是标准的JSON
+json_str = '{"age": 20, "score": 88, "name": "Bob"}'
+print(json.loads(json_str))     # 把JSON反序列化为Python对象，用loads()或者对应的load()方法，前者把JSON的字符串反序列化，后者从file-like Object中读取字符串并反序列化
