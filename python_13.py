@@ -18,3 +18,7 @@ print("--------------------------------")
 
 re_c = re.compile(r'^\d{3}\-\d{3,8}$')
 print(re_c.match('010-12345').group())
+
+re_s = re.compile(r'\s+')
+print(re_s.split('a b   c'))
+
