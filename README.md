@@ -17,7 +17,7 @@ Record learning python.
 + python_13：正则表达式
 + python_14：常用内建模块
 + python_15：图形界面
-+ python_16
++ python_16：网络编程
 + python_17
 + python_18
 
@@ -312,7 +312,14 @@ Record learning python.
 + Python支持多种图形界面的第三方库(Tk wxWidgets Qt GTK)。
 + Python内置的Tkinter可以满足基本的GUI程序的要求，如果是非常复杂的GUI程序，建议用操作系统原生支持的语言和库来编写。
 #### python_16
-+ 
++ TCP编程
+    + Socket是网络编程的一个抽象概念。通常我们用一个Socket表示“打开了一个网络链接”，而打开一个Socket需要知道目标计算机的IP地址和端口号，再指定协议类型即可。
+    + 创建Socket时，AF_INET指定使用IPv4协议，如果要用更先进的IPv6，就指定为AF_INET6。SOCK_STREAM指定使用面向流的TCP协议。
+    + 同一个端口，被一个Socket绑定了以后，就不能被别的Socket绑定了。
++ UDP编程
+    + UDP是面向无连接的协议。
+    + 使用UDP协议时，不需要建立连接，只需要知道对方的IP地址和端口号，就可以直接发数据包。
+    + 服务器绑定UDP端口和TCP端口互不冲突，也就是说，UDP的9999端口与TCP的9999端口可以各自绑定。
 
 
     
