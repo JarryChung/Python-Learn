@@ -15,8 +15,8 @@ Record learning python.
 + python_11：I/O编程
 + python_12：进程和线程
 + python_13：正则表达式
-+ python_14：
-+ python_15
++ python_14：常用内建模块
++ python_15：常用第三方模块
 + python_16
 + python_17
 + python_18
@@ -295,6 +295,21 @@ Record learning python.
 + `$`表示行的结束，`\d$`表示必须以数字结束。
 + 正则匹配默认是贪婪匹配，也就是匹配尽可能多的字符。
 #### python_14
++ datetime-处理日期和时间的标准库
+    + datetime表示的时间需要时区信息才能确定一个特定的时间，否则只能视为本地时间。
+    + 如果要存储datetime，最佳方法是将其转换为timestamp再存储，因为timestamp的值与时区完全无关。
++ collections-集合模块
+    + namedtuple是一个函数，它用来创建一个自定义的tuple对象，并且规定了tuple元素的个数，并可以用属性而不是索引来引用tuple的某个元素，它具备tuple的不变性。
+    + deque是为了高效实现插入和删除操作的双向列表，适合用于队列和栈。
+    + deque除了实现list的`append()`和`pop()`外，还支持`appendleft()`和`popleft()`，这样就可以非常高效地往头部添加或删除元素。
+    + 使用dict时，如果引用的Key不存在，就会抛出KeyError。如果希望key不存在时，返回一个默认值，就可以用defaultdict。
+    + 使用dict时，Key是无序的，如果要保持Key的顺序，可以用OrderedDict。
+    + OrderedDict的Key会按照插入的顺序排列，不是Key本身排序。
+    + OrderedDict可以实现一个FIFO（先进先出）的dict，当容量超出限制时，先删除最早添加的Key。
+    + Counter是一个简单的计数器。
++ urllib提供的功能就是利用程序去执行各种HTTP请求。如果要模拟浏览器完成特定功能，需要把请求伪装成浏览器。伪装的方法是先监控浏览器发出的请求，再根据浏览器的请求头来伪装，User-Agent头就是用来标识浏览器的。
++ 利用HTMLParser，可以把网页中的文本、图像等解析出来。
+#### python_15
 
 
     
