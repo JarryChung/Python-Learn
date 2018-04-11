@@ -18,8 +18,8 @@ Record learning python.
 + python_14：常用内建模块
 + python_15：图形界面
 + python_16：网络编程
-+ python_17
-+ python_18
++ python_17：电子邮件
++ python_18：访问数据库
 
 [toc]
 
@@ -320,24 +320,18 @@ Record learning python.
     + UDP是面向无连接的协议。
     + 使用UDP协议时，不需要建立连接，只需要知道对方的IP地址和端口号，就可以直接发数据包。
     + 服务器绑定UDP端口和TCP端口互不冲突，也就是说，UDP的9999端口与TCP的9999端口可以各自绑定。
+#### python_17
++ SMTP发送邮件
+    + SMTP是发送邮件的协议，Python内置对SMTP的支持，可以发送纯文本邮件、HTML邮件以及带附件的邮件。
+    + Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件。
+    +构造MIMEText对象时，第一个参数就是邮件正文，第二个参数是MIME的subtype，传入'plain'表示纯文本，最终的MIME就是'text/plain'，最后一定要用utf-8编码保证多语言兼容性。
+    + 因为邮件主题、如何显示发件人、收件人等信息并不是通过SMTP协议发给MTA，而是包含在发给MTA的文本中的，所以，我们必须把From、To和Subject添加到MIMEText中，才是一封完整的邮件。
+    + 使用标准的25端口连接SMTP服务器时，使用的是明文传输，发送邮件的整个过程可能会被窃听。要更安全地发送邮件，可以加密SMTP会话，实际上就是先创建SSL安全连接，然后再使用SMTP协议发送邮件。
++ POP3收取邮件
+    + 收取邮件就是编写一个MUA作为客户端，从MDA把邮件获取到用户的电脑或者手机上。收取邮件最常用的协议是POP协议，目前版本号是3，俗称POP3。
+    + 收取邮件分两步
+        + 第一步：用poplib把邮件的原始文本下载到本地；
+        + 第二步：用email解析原始文本，还原为邮件对象。
 
 
-    
-    
-
-### 篇章标题
-+ 注意小点
-> 单行代码
-
-### page2
-
-**impotant**  
-dafewfew
-fesfewf  
-fd
-
-```python
-print("代码")
-```
-
-***
+#### python_18
